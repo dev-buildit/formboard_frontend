@@ -1,7 +1,15 @@
 import { useState, useEffect } from "react";
-import axios, { AxiosError, AxiosRequestConfig, AxiosResponse } from "axios";
+import axios, {
+  Axios,
+  AxiosError,
+  AxiosRequestConfig,
+  AxiosResponse,
+} from "axios";
 
-const useFetchData = (config : AxiosRequestConfig) => {
+/**
+ * This functions is used to fetch an api
+ */
+const useFetchData = (config: AxiosRequestConfig) => {
   const [data, setData] = useState<AxiosResponse>();
   const [error, setError] = useState<AxiosError>();
 
