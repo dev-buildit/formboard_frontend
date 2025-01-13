@@ -14,3 +14,5 @@ const useFetchData = (config : AxiosRequestConfig) => {
 
   return { data, error };
 };
+
+export default useFetchData;
