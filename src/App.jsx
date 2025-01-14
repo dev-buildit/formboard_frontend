@@ -1,9 +1,10 @@
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
-
   return (
     <>
       {/* Don't delete code within this two comment */}
@@ -15,12 +16,11 @@ function App() {
       ></div>
       {/* Stopping here */}
 
-      <div
-        className="d-flex justify-content-center align-items-center"
-        style={{ height: "100vh", width: "100vw" }}
-      >
-        <h1>FORMBOARD PROJECT</h1>
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Home />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
