@@ -1,4 +1,12 @@
+import {
+  faCode,
+  faMailBulk,
+  faMailForward,
+  faPaperPlane,
+} from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
+import mainLogo from "../assets/logo-full-1.png";
 
 const SignUpForm = () => {
   return (
@@ -7,8 +15,8 @@ const SignUpForm = () => {
         {/* Left Section: Form */}
         <div className="w-full md:w-8/12 p-8">
           <img
-            src="src/assets/logo-full-1.png" // Replace with your logo's path
-            alt="Logo"
+            src={mainLogo} // Replace with your logo's path
+            alt="Formboard Logo"
             className="h-12 w-auto mr-3 mb-4" // Adjust size as needed
           />
           <h1 className="text-lg text-slate-400 font-bold my-4 text-center md:text-left">
@@ -110,17 +118,13 @@ const SignUpForm = () => {
           <div className="space-y-6 h-full flex flex-col justify-around">
             <div className="flex items-start gap-4">
               <span>
-                <img
-                  src="src/assets/send.png" // Replace with your logo's path
-                  alt="Logo"
-                  className="h-auto w-auto mr-3" // Adjust size as needed
-                />
+                <FontAwesomeIcon icon={faPaperPlane} className="mr-3" />
               </span>
               <div>
-                <h2 className="text-lg font-bold text-center md:text-left">
+                <h2 className="text-lg font-bold text-start md:text-left">
                   All your submissions in one place
                 </h2>
-                <p className="text-sm text-center md:text-left">
+                <p className="text-sm text-start md:text-left">
                   No more hunting through emails. You can search, sort and
                   filter your form submissions in your Formboard dashboard.
                 </p>
@@ -129,17 +133,13 @@ const SignUpForm = () => {
 
             <div className="flex items-start gap-4">
               <span>
-                <img
-                  src="src/assets/email.png" // Replace with your logo's path
-                  alt="Logo"
-                  className="h-auto w-auto mr-3" // Adjust size as needed
-                />
+                <FontAwesomeIcon icon={faMailBulk} className="mr-3" />
               </span>
               <div>
-                <h2 className="text-lg font-bold text-center md:text-left">
+                <h2 className="text-lg font-bold text-start md:text-left">
                   Email forwarding
                 </h2>
-                <p className="text-sm text-center md:text-left">
+                <p className="text-sm text-start md:text-left">
                   Provides an option for form submissions to be forwarded to a
                   specified email address.
                 </p>
@@ -148,17 +148,13 @@ const SignUpForm = () => {
 
             <div className="flex items-start gap-4">
               <span>
-                <img
-                  src="src/assets/nocode.png" // Replace with your logo's path
-                  alt="Logo"
-                  className="h-auto w-auto mr-3" // Adjust size as needed
-                />
+                <FontAwesomeIcon icon={faCode} className="mr-3" />
               </span>
               <div>
-                <h2 className="text-lg font-bold text-center md:text-left">
+                <h2 className="text-lg font-bold text-start md:text-left">
                   No backend required
                 </h2>
-                <p className="text-sm text-center md:text-left">
+                <p className="text-sm text-start md:text-left">
                   Easily collect data without worrying about server-side setup.
                   Formboard allows you to focus on building your form while it
                   handles the rest.

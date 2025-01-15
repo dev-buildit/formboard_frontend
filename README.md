@@ -44,4 +44,4 @@ We are committed to maintaining a welcoming and inclusive community. Please read
 
 ## 🗒️ License
 
-Formboard Frontend is licensed under the [MIT Licence](./LICENSE.md).
+Formboard Frontend is licensed under the [MIT Licence](./LICENSE).
