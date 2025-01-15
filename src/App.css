@@ -1,4 +1,63 @@
-/*# sourceMappingURL=App.css.map */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+  --bs-primary: #0b0b6d;
+  --bs-primary-hover: #050599;
+  --bs-primary-rgb: 11, 11, 109;
+}
+
+html,
+body {
+  overflow: hidden; /* Prevent scroll on narrow devices */
+}
+
+header {
+  padding-top: 56px;
+}
+
+@media (max-width: 991.98px) {
+  .offcanvas-collapse {
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: 100%;
+    width: 100%;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    overflow-y: auto;
+    visibility: hidden;
+    background-color: #343a40;
+    transition: transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  }
+  .offcanvas-collapse.open {
+    visibility: visible;
+    transform: translateX(-100%);
+  }
+}
+.btn-primary {
+  background-color: var(--bs-primary);
+  border: 1px solid var(--bs-primary);
+}
+.btn-primary:hover {
+  background-color: var(--bs-primary-hover) !important;
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--bs-primary) !important;
+  color: var(--bs-primary);
+}
+.btn-outline-primary:hover {
+  background-color: var(--bs-primary) !important;
+  color: white;
+}
+
+.nav-tabs .nav-link {
+  color: var(--bs-secondary) !important;
+  font-weight: 500;
+  border: none !important;
+}
+.nav-tabs .nav-link.active {
+  color: var(--bs-primary) !important;
+  border-bottom: 2px solid var(--bs-primary) !important;
+}/*# sourceMappingURL=App.css.map */

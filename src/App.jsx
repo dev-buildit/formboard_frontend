@@ -1,9 +1,11 @@
-// import "bootstrap/dist/css/bootstrap.css";
-// import "bootstrap/dist/js/bootstrap.js";
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap/dist/js/bootstrap.js";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
 import SignUpForm from "./pages/Signup";
+import Header from "./components/Header";
+import FormInfo from "./pages/FormInfo";
 
 function App() {
   return (
@@ -19,8 +21,13 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-          <Route index element={<Home />} />
-          <Route path="/signup" element={<SignUpForm />} />
+          <Route path="auth" element={<Outlet />}>
+            <Route path="signup" element={<SignUpForm />} />
+          </Route>
+          <Route path="/" element={<Header />}>
+            <Route index element={<Home />} />
+            <Route path="form/:id" element={<FormInfo />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
