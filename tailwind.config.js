@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        themeBlue: "#0B0B6D", // Add your custom color here
+        themeBlue: "#0B0B6D",
+        buttonColor: "#0B0B6DC9",
       },
       height: {
         screen: "100vh",

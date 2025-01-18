@@ -16,9 +16,9 @@ const SignUpForm = () => {
         {/* Left Section: Form */}
         <div className="w-full md:w-8/12 p-8">
           <img
-            src={mainLogo} // Replace with your logo's path
+            src={mainLogo}
             alt="Formboard Logo"
-            className="h-12 w-auto mr-3 mb-4" // Adjust size as needed
+            className="h-12 w-auto mr-3 mb-4"
           />
           <h1 className="text-lg text-slate-400 font-bold my-4 text-start md:text-left">
             Welcome, Please sign up to continue
@@ -101,7 +101,7 @@ const SignUpForm = () => {
               </label>
             </div>
 
-            <button className="bg-neutral-300 hover:bg-blue-700 text-slate-500 font-bold py-2 px-4 rounded w-full md:w-auto">
+            <button className="bg-neutral-300 hover:bg-blue-700 hover:text-blue-800 text-slate-500 font-bold py-2 px-4 rounded w-full md:w-auto">
               Submit
             </button>
           </form>
@@ -123,7 +123,7 @@ const SignUpForm = () => {
 
           <p className="text-sm mt-4 text-start md:text-left">
             Already have an account?{" "}
-            <a href="#" className="text-indigo-800 font-bold">
+            <a href="login" className="text-indigo-800 font-bold">
               Login
             </a>
           </p>
