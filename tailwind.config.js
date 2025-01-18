@@ -6,6 +6,9 @@ export default {
       colors: {
         themeBlue: "#0B0B6D", // Add your custom color here
       },
+      height: {
+        screen: "100vh",
+      },
     },
   },
   plugins: [],

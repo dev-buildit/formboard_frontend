@@ -7,11 +7,12 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import mainLogo from "../assets/logo-full-1.png";
+import { faGit, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
 const SignUpForm = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white">
-      <div className="bg-white w-full flex flex-col md:flex-row overflow-hidden mx-4 md:mx-20">
+    <div className="min-h-screen flex items-center justify-center bg-white overflow-y-auto">
+      <div className="bg-white w-full flex flex-col md:flex-row overflow-hidden m-4 md:mx-20">
         {/* Left Section: Form */}
         <div className="w-full md:w-8/12 p-8">
           <img
@@ -19,7 +20,7 @@ const SignUpForm = () => {
             alt="Formboard Logo"
             className="h-12 w-auto mr-3 mb-4" // Adjust size as needed
           />
-          <h1 className="text-lg text-slate-400 font-bold my-4 text-center md:text-left">
+          <h1 className="text-lg text-slate-400 font-bold my-4 text-start md:text-left">
             Welcome, Please sign up to continue
           </h1>
 
@@ -104,8 +105,23 @@ const SignUpForm = () => {
               Submit
             </button>
           </form>
+          <div className="flex flex-col items-start space-y-4 w-10/12 mt-3">
+            <div className="flex items-center w-full">
+              <div className="flex-grow border-t border-gray-300"></div>
+              <span className="mx-4 text-gray-500">OR</span>
+              <div className="flex-grow border-t border-gray-300"></div>
+            </div>
+            <button className="flex items-center justify-center w-full max-w-sm px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              <FontAwesomeIcon icon={faGoogle} className="mr-3 text-lg" />
+              Continue with Google
+            </button>
+            <button className="flex items-center justify-center w-full max-w-sm px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              <FontAwesomeIcon icon={faGithub} className="mr-3 text-lg" />
+              Continue with GitHub
+            </button>
+          </div>
 
-          <p className="text-sm mt-4 text-center md:text-left">
+          <p className="text-sm mt-4 text-start md:text-left">
             Already have an account?{" "}
             <a href="#" className="text-indigo-800 font-bold">
               Login
@@ -114,7 +130,7 @@ const SignUpForm = () => {
         </div>
 
         {/* Right Section: Features */}
-        <div className="w-full md:w-4/12 bg-themeBlue text-white px-8 py-16 rounded-lg">
+        <div className="w-full md:w-4/12 bg-themeBlue text-white px-8 py-16 rounded-lg h-[90vh]">
           <div className="space-y-6 h-full flex flex-col justify-around">
             <div className="flex items-start gap-4">
               <span>
