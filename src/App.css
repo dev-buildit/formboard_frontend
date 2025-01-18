@@ -9,7 +9,9 @@
 
 html,
 body {
-  overflow: hidden; /* Prevent scroll on narrow devices */
+  overflow-y: auto;  
+  overflow-x: hidden;
+  height: 100%;
 }
 
 header {
