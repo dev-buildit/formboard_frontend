@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import SignUpForm from "./pages/Signup";
 import Header from "./components/Header";
 import FormInfo from "./pages/FormInfo";
+import LoginPage from "./pages/Login";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Routes>
           <Route path="auth" element={<Outlet />}>
             <Route path="signup" element={<SignUpForm />} />
+            <Route path="login" element={<LoginPage />} />
           </Route>
           <Route path="/" element={<Header />}>
             <Route index element={<Home />} />
