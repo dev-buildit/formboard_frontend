@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-router-dom";
 import whiteLogo from "../assets/logo-full-2.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
@@ -66,6 +66,12 @@ const LoginPage = () => {
             />
             Continue with GitHub
           </button>
+          <p className="text-sm mt-4 text-start md:text-left">
+            Don't have an account?{" "}
+            <Link to="/auth/signup" className="text-indigo-800 font-bold">
+              Signup
+            </Link>
+          </p>
         </div>
       </div>
     </div>
