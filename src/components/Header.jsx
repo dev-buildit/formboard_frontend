@@ -95,7 +95,7 @@ export default function Header() {
                   <FontAwesomeIcon icon={faUserGear} />{" "}
                   <span className="ms-2 text-secondary fw-normal">Account</span>
                 </Link>
-                <button className="btn btn-secondary" title="Signout">
+                <button className="btn btn-light" title="Signout">
                   <FontAwesomeIcon icon={faSignOut} />
                 </button>
               </div>

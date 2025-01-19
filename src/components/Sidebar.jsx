@@ -35,7 +35,7 @@ export default function Sidebar() {
               </button>
             </div>
             <div className="col-6 text-center">
-              <h6>TEST FORMBOARD</h6>
+              <h6 className="h6">TEST FORMBOARD</h6>
             </div>
             <div className="col-3 text-end">
               <button className="btn">
@@ -48,7 +48,7 @@ export default function Sidebar() {
             <div>
               <div className="w-100 mt-3 d-flex align-items-center justify-content-between">
                 <Link to="./form/dd" className="btn w-100 text-start">
-                  <h6>Form name</h6>
+                  <h6 className="h6">Form name</h6>
                 </Link>
                 <button className="btn">
                   <FontAwesomeIcon icon={faEllipsisV} />

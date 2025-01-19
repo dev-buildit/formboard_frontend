@@ -6,7 +6,7 @@ export default function Home() {
         <div>
           <div className="d-flex align-items-center justify-content-center">
             <img src={formboardLogo} alt="Formboard Logo" className="me-3" />
-            <h1 className="display-4 text-white">Welcome</h1>
+            <h1 className="display-4 text-white h1">Welcome</h1>
           </div>
           <p className="text-center lead text-white mt-3">
             Select a form or project to get started
