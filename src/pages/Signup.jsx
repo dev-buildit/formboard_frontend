@@ -5,7 +5,7 @@ import {
   faPaperPlane,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import { Link } from "react-router-dom";
 import mainLogo from "../assets/logo-full-1.png";
 import { faGit, faGithub, faGoogle } from "@fortawesome/free-brands-svg-icons";
 
@@ -123,9 +123,9 @@ const SignUpForm = () => {
 
           <p className="text-sm mt-4 text-start md:text-left">
             Already have an account?{" "}
-            <a href="login" className="text-indigo-800 font-bold">
+            <Link to="/auth/login" className="text-indigo-800 font-bold">
               Login
-            </a>
+            </Link>
           </p>
         </div>
 
