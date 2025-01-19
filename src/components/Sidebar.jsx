@@ -19,7 +19,11 @@ export default function Sidebar() {
         style={{ height: "95vh" }}
       >
         <div className="p-1 pt-4">
-          <button className="btn btn-outline-primary w-100 py-2">
+          <button
+            className="btn btn-outline-primary w-100 py-2"
+            data-bs-toggle="modal"
+            data-bs-target="#addFormModal"
+          >
             <FontAwesomeIcon icon={faPlus} className="me-2" /> Add New
           </button>
 
