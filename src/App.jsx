@@ -4,9 +4,10 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, Outlet } from "react-router-dom";
 import Home from "./pages/Home";
 import SignUpForm from "./pages/Signup";
-import Header from "./components/Header";
+import Layout from "./components/Layout";
 import FormInfo from "./pages/FormInfo";
 import LoginPage from "./pages/Login";
+import Account from "./pages/Account";
 
 function App() {
   return (
@@ -26,7 +27,8 @@ function App() {
             <Route path="signup" element={<SignUpForm />} />
             <Route path="login" element={<LoginPage />} />
           </Route>
-          <Route path="/" element={<Header />}>
+          <Route path="account" element={<Account />} />
+          <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="form/:id" element={<FormInfo />} />
           </Route>
