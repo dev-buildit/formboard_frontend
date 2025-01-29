@@ -1,4 +1,4 @@
-import { faCopy, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faCopy, faSearch, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
@@ -80,11 +80,59 @@ export default function FormInfo() {
                 POST, and add a name attribute to each input.
               </p>
               <h6 className="h6">CODE EXAMPLE</h6>
-              <div className="container">
-                <CopyBlock
-                  theme={dracula}
-                  language="html"
-                  text={`<!-- modify this form HTML and place wherever you want your form -->
+              <div class="bd-example">
+                <nav>
+                  <div class="nav nav-tabs mb-3" id="nav-tab" role="tablist">
+                    <button
+                      class="nav-link active"
+                      id="nav-html-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-html"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-html"
+                      aria-selected="true"
+                    >
+                      HTML
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="nav-js-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-js"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-js"
+                      aria-selected="false"
+                    >
+                      JavaScript
+                    </button>
+                    <button
+                      class="nav-link"
+                      id="nav-ajax-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#nav-ajax"
+                      type="button"
+                      role="tab"
+                      aria-controls="nav-ajax"
+                      aria-selected="false"
+                    >
+                      Ajax
+                    </button>
+                  </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div
+                    class="tab-pane fade active show"
+                    id="nav-html"
+                    role="tabpanel"
+                    aria-labelledby="nav-html-tab"
+                  >
+                    <div className="container">
+                      <CopyBlock
+                        theme={dracula}
+                        language="html"
+                        text={`<!-- modify this form HTML and place wherever you want your form -->
 <form
   action="https://formspree.io/f/xovqeqbq"
   method="POST"
@@ -101,8 +149,73 @@ export default function FormInfo() {
   <button type="submit">Send</button>
 </form>
                     `}
-                  showLineNumbers
-                />
+                        showLineNumbers
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-ajax"
+                    role="tabpanel"
+                    aria-labelledby="nav-ajax-tab"
+                  >
+                    <div className="container">
+                      <CopyBlock
+                        theme={dracula}
+                        language="html"
+                        text={`<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xovqeqbq"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+                    `}
+                        showLineNumbers
+                      />
+                    </div>
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="nav-js"
+                    role="tabpanel"
+                    aria-labelledby="nav-js-tab"
+                  >
+                    <div className="container">
+                      <CopyBlock
+                        theme={dracula}
+                        language="html"
+                        text={`<!-- modify this form HTML and place wherever you want your form -->
+<form
+  action="https://formspree.io/f/xovqeqbq"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+                    `}
+                        showLineNumbers
+                      />
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -152,16 +265,146 @@ export default function FormInfo() {
               role="tabpanel"
               aria-labelledby="nav-settings-tab"
             >
-              <p>
-                <strong>
-                  This is some placeholder content the Contact tab's associated
-                  content.
-                </strong>{" "}
-                Clicking another tab will toggle the visibility of this one for
-                the next. The tab JavaScript swaps classes to control the
-                content visibility and styling. You can use it with tabs, pills,
-                and any other <code>.nav</code>-powered navigation.
-              </p>
+              <div className="container">
+                <p className="text-[15px] font-[700] text-[#808080] capitalize">
+                  general
+                </p>
+
+                <div className="w-full mt-[33px]">
+                  <h6 className="h6">Form name</h6>
+                  <div className="row">
+                    <div className="col-10">
+                      <input
+                        type="text"
+                        className="form-control form-control-lg rounded-0"
+                        placeholder="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                      />
+                    </div>
+                    <div className="col-2">
+                      <button className="btn btn-lg btn-outline-secondary rounded-0">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                  <p className="text-[15px] text-[#808080] mt-[10px] font-[500]">
+                    The form name won't be shown to visitors
+                  </p>
+                </div>
+                <div className="w-full mt-[33px]">
+                  <h6 className="h6">Form Enable</h6>
+                  <div className="row">
+                    <div className="col-10">
+                      <p className="text-[15px] text-[#808080] mt-[10px] font-[500]">
+                        Choose whether to allow new submissions
+                      </p>
+                    </div>
+                    <div className="col-2 text-end">
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input checked:bg-black checked:border-black checked:outline-black"
+                          type="checkbox"
+                          id="flexSwitchCheckChecked"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p className="text-[15px] font-[700] text-[#808080] capitalize  mt-[33px]">
+                  general
+                </p>
+                <div className="w-full mt-[33px]">
+                  <h6 className="h6">Email Notification</h6>
+                  <div className="row">
+                    <div className="col-10">
+                      <p className="text-[15px] text-[#808080] mt-[10px] font-[500]">
+                        Send email notification
+                      </p>
+                    </div>
+                    <div className="col-2 text-end">
+                      <div class="form-check form-switch">
+                        <input
+                          class="form-check-input checked:bg-black checked:border-black checked:outline-black"
+                          type="checkbox"
+                          id="flexSwitchCheckChecked"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full mt-[33px]">
+                  <h6 className="h6">Target Email</h6>
+                  <div className="row">
+                    <div className="col-10">
+                      <select
+                        type="text"
+                        className="form-control form-control-lg rounded-0"
+                        placeholder="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                      >
+                        <option>testuser@gmail.com</option>
+                      </select>
+                    </div>
+                    <div className="col-2">
+                      <button className="btn btn-lg btn-outline-secondary rounded-0">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                  <p className="text-[15px] text-[#808080] mt-[10px] font-[500]">
+                    Where to send submissions. To add a new email address, visit
+                    the{" "}
+                    <Link
+                      href=""
+                      className="text-primary fw-bold text-decoration-none"
+                    >
+                      {" "}
+                      account page
+                    </Link>{" "}
+                  </p>
+                </div>
+                <div className="w-full mt-[33px]">
+                  <h6 className="h6">Target Email</h6>
+                  <div className="row">
+                    <div className="col-10">
+                      <input
+                        type="text"
+                        className="form-control form-control-lg rounded-0"
+                        placeholder="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                      />
+                    </div>
+                    <div className="col-2">
+                      <button className="btn btn-lg btn-outline-secondary rounded-0">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                  <p className="text-[15px] text-[#808080] mt-[10px] font-[500]">
+                    After successful submit, redirect to this URL. The URL can
+                    be absolute, like "https://yoursite.com/thanks", or
+                    relative, like "thanks"
+                  </p>
+                </div>
+                <div className="w-full mt-[33px]">
+                  <h6 className="h6">Delete Form</h6>
+                  <div className="row">
+                    <div className="col-10">
+                      <p className="text-[15px] text-[#808080] mt-[10px] font-[500]">
+                        Deleting the form will erase all traces of this form,
+                        including all submissions and file uploads.
+                      </p>
+                    </div>
+                    <div className="col-2 text-end">
+                      <div class="form-check form-switch">
+                        <button
+                          className="rounded-0 border-none bg-transparent text-buttonColor"
+                          title="Delete"
+                        >
+                          <FontAwesomeIcon icon={faTrash} size={21} />
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

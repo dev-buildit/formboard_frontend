@@ -15,8 +15,8 @@ export default function Sidebar() {
   return (
     <>
       <div
-        className="container-fluid bg-white border-end shadow"
-        style={{ height: "95vh" }}
+        className="container-fluid bg-white border-end shadow position-sticky top-0"
+        style={{ height: "100vh" }}
       >
         <div className="p-1 pt-4">
           <button

@@ -103,20 +103,6 @@ export default function Header() {
           </div>
         </nav>
       </header>
-      <main className="container-fluid p-0 bg-light">
-        <div className="container-fluid p-0">
-          <div className="row">
-            <div className="col-3">
-              <Sidebar />
-            </div>
-            <div className="col-9 side-nav">
-              <div className="overflow-y-scroll w-100 p-3">
-                <Outlet />
-              </div>
-            </div>
-          </div>
-        </div>
-      </main>
     </>
   );
 }
