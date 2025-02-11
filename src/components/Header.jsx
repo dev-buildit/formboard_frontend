@@ -88,6 +88,7 @@ export default function Header() {
                   </span>
                 </Link>
                 <Link
+                  to="/account"
                   className={`text-decoration-none text-primary me-3 fw-bold ${
                     navOpen && "my-2"
                   }`}
